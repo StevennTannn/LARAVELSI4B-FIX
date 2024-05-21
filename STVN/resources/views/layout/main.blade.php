@@ -6,7 +6,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>yield</title>
+  <title>@yield('title')</title>
   <!-- base:css -->
   <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
@@ -31,7 +31,18 @@
           <a class="nav-link" href="index.html">
             <i class="mdi mdi-view-quilt menu-icon"></i>
             <span class="menu-title">Dashboard</span>
-            <div class="badge badge-info badge-pill">2</div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('fakultas')}}">
+            <i class="mdi mdi-bank"></i>
+            <span class="menu-title">Fakultas</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('prodi')}}">
+            <i class="mdi mdi-view-list"></i>
+            <span class="menu-title">Program Studi</span>
           </a>
         </li>
         <li class="nav-item sidebar-category">
