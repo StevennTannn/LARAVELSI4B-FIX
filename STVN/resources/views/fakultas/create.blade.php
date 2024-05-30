@@ -18,14 +18,14 @@
                       <label for="nama">Nama Fakultas</label>
                       <input type="text" class="form-control" name="nama" placeholder="Nama Fakultas" value="{{ old('nama')}}">
                       @error('nama')
-                      <span class="text-danger">{( $message )}</span>
+                      <span class="text-danger">{{ $message }}</span>
                       @enderror
                     </div>
                     <div class="form-group">
                       <label for="singkatan">Singkatan</label>
                       <input type="text" class="form-control" name="singkatan" placeholder="FIKR, FEB, ...." value="{{ old('nama')}}">
                       @error('singkatan')
-                      <span class="text-danger">{( $message )}</span>
+                      <span class="text-danger">{{ $message }}</span>
                       @enderror
                     </div>
                     <button type="submit" class="btn btn-primary mr-2">Simpan</button>
