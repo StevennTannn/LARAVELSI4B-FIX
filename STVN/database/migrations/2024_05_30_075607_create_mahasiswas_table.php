@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->char('npm', 10);
             $table->string('nama', 45);
-            $table->string('singkatan', 4);
             $table->string('tempat_lahir', 45);
             $table->date('tanggal_lahir');
             $table->string('alamat');
