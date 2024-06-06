@@ -28,10 +28,14 @@
           <span></span>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url('index.html') }}">
+          <a class="nav-link" href="{{ url('dashboard') }}">
             <i class="mdi mdi-view-quilt menu-icon"></i>
             <span class="menu-title">Dashboard</span>
           </a>
+        </li>
+        <li class="nav-item">
+        </li>
+        <li class="nav-item">
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ url('fakultas')}}">
@@ -43,6 +47,12 @@
           <a class="nav-link" href="{{ url('prodi')}}">
             <i class="mdi mdi-view-list"></i>
             <span class="menu-title">Program Studi</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('mahasiswa')}}">
+            <i class="mdi mdi-view-list"></i>
+            <span class="menu-title">Mahasiswa</span>
           </a>
         </li>
         <li class="nav-item sidebar-category">

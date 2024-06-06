@@ -66,7 +66,7 @@
                     </div>
                     <div class="form-group">
                       <label for="url_foto">URL Foto</label>
-                      <input type="file" class="form-control" name="url_foto" placeholder="URL_Foto">
+                      <input type="file" class="form-control" name="url_foto" placeholder="URL_Foto"  value="{{ old('url_foto')? old('url_foto'): $mahasiswa['url_foto']}}" placeholder="URL_Foto">
                       @error('url_foto')
                       <span class="text-danger">{{ $message }}</span>
                       @enderror
