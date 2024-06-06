@@ -34,14 +34,24 @@ class MahasiswaController extends Controller
     {
         $val = $request->validate([
             'npm' => "required|unique:mahasiswas",
-            'nama' => 'required|max:50',
-            'tempat_lahir' => 'required|max:20',
-            'tanggal_lahir' => 'required|date',
+            'nama' => 'required',
+            'tempat_lahir' => 'required',
+            'tanggal_lahir' => 'required',
             'alamat' => 'required',
             'prodi_id' => 'required',
-            'url_foto' => 'required'
+            'url_foto' => 'required|file|mimes:png,jpg|max:5005'
         ]);
 
+        // ekstensi file yg diupload
+        $ext =
+        $request->url_foto->getClientOriginalExtension();
+        // rename misal : npm.extensi 2226240065.jpg
+        $val['url_foto'] = $request->npm.".".$ext;
+        // upload ke dalam folder public/foto
+        $request->url_foto->move('foto', $val['url_foto']);
+
+
+        // simpan ke tabel mahasiswa
         Mahasiswa::create($val);
     
         return redirect()->route('mahasiswa.index')->with('success', $val['nama'].'berhasil disimpan');
@@ -76,6 +86,8 @@ class MahasiswaController extends Controller
      */
     public function destroy(Mahasiswa $mahasiswa)
     {
-        //
+        // dd($mahasiswa);
+        $mahasiswa->delete(); //hapus data mahasiswa
+        return redirect()->route('mahasiswa.index')->with('success', "Data berhasil dihapus");
     }
 }
