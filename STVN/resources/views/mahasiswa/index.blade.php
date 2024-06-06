@@ -44,10 +44,8 @@
                                         @method('delete')
                                         @csrf
                                         <button type="submit" class="btn btn-sm btn-rounded btn-danger show_confirm" data-name="{{ $item['nama']}}">Hapus</button>
-                                        
+                                        <a href="{{ route('mahasiswa.edit', $item["id"])}}" class="btn btn-sm btn-rounded btn-warning">Ubah</a>
                                 </form>
-                                </td>
-
                             </tr>
                             @endforeach
                         </tbody>
@@ -78,7 +76,7 @@
           event.preventDefault();
           Swal.fire({
             title: "Yakin dek?",
-            text: "Hilang permanen kalau dihapus",
+            text: "Hilang permanen ini",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
