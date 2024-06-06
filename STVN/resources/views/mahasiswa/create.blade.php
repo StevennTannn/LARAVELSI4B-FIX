@@ -50,7 +50,7 @@
                       @enderror
                     </div>
                     <div class="form-group">
-                      <label for="prodi_id">Prodi</label>
+                      <label for="prodi_id">Program Studi</label>
                       <select name="prodi_id" class="form-control">
                             @foreach ($prodi as $item){
                                 <option value="{{ $item["id"]}}">{{ $item["nama"]}}</option>
