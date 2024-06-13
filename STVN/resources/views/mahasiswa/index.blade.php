@@ -13,7 +13,9 @@
                     List data Mahasiswa
                     </p>
                     {{--tombol tambah--}}
-                    <a href="{{ route('mahasiswa.create')}}" class="btn btn-rounded btn-primary">Tambah</a>
+                    @can('create', App\Mahasiswa::class)
+                        <a href="{{ route('mahasiswa.create')}}" class="btn btn-rounded btn-primary">Tambah</a>
+                    @endcan
                     <div class="table-responsive">
                         <table class="table">
                         <thead>
