@@ -17,7 +17,7 @@ Route::get('/dashboard', function () {
 Route::resource('fakultas', FakultasController::class);
 Route::resource('prodi', ProdiController::class);
 Route::resource('mahasiswa', MahasiswaController::class);
-Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware(['auth', 'verified']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
