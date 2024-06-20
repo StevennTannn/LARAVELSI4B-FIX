@@ -45,7 +45,7 @@ class ProdiPolicy
      */
     public function delete(User $user, Prodi $prodi): bool
     {
-        //
+        return $user->role === 'A';
     }
 
     /**

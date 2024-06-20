@@ -29,7 +29,6 @@ class MahasiswaPolicy
      */
     public function create(User $user): bool
     {
-        // role A dan D diizinkan untuk membuat data mahasiswa
         return $user->role === 'A' || $user->role === 'D';
         // return in_array($user->role, ['A', 'D']);
     }
