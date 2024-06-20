@@ -1,1 +1,1 @@
-<h1>Selamat {{ $viewsalam}} </h1>
+<h1>Selamat {{ $viewsalam }}</h1>

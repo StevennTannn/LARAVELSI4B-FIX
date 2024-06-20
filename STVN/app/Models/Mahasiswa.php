@@ -9,11 +9,14 @@ class Mahasiswa extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['npm', 'nama', 'tempat_lahir', 'tanggal_lahir', 'alamat','prodi_id', 'url_foto'];
-
-    public function Prodi(){
-        return $this ->belongsTo(Prodi::class, 'prodi_id');
+    protected $fillable =['npm','nama','tempat_lahir','tanggal_lahir','alamat','prodi_id','url_foto'];
+    
+    public function prodi() {
+        return $this->belongsTo(Prodi::class, 'prodi_id');
+        // return $this->belongsTo(Nama Model:class, 'foreign_key');
         // 1 prodi 1 fakultas belongsTo()
-        // 1 falkultas > 1 prodi hasMany()
+        // 1 fakultas > 1 prodi hasMany()
+
+        
     }
 }

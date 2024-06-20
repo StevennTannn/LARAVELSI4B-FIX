@@ -37,7 +37,7 @@ class ProdiPolicy
      */
     public function update(User $user, Prodi $prodi): bool
     {
-        //
+        return $user->role === 'A';
     }
 
     /**
